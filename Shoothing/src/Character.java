@@ -11,6 +11,14 @@ public class Character {
 		x+=vx;
 		y+=vy;
 	}
+	public void move1() {
+		x-=vy;
+		y+=vy;
+	}
+	public void move2() {
+		x+=vy;
+		y+=vy;
+	}
 	public void draw(MyFrame f) {
 		f.setColor(0,128,0);
 		f.fillRect(x, y, 30, 30);
