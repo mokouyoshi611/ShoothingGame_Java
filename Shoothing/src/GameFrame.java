@@ -20,10 +20,12 @@ public class GameFrame extends MyFrame{
     	int i=0;
     	while(i<GameWorld.playerBullets.size()) {
     		PlayerBullet b=GameWorld.playerBullets.get(i);
+    		if(true) {
     		b.draw(this);
     		b.move();
-    		b.move1();
-    		b.move2();
+    		}
+
+    		
     		
     		
     		if(b.y<0) {
