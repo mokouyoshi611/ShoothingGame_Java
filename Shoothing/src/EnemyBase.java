@@ -5,6 +5,7 @@ public class EnemyBase extends Enemy{
 	}
 	public void move() {
 		super.move();
+		
 		if (x>300) vx=-1;
 		if (x<100) vx=1;
 		if(Math.random()<0.05) {
@@ -13,6 +14,14 @@ public class EnemyBase extends Enemy{
 		if (Math.random()<0.05) {
 			GameWorld.enemies.add(new RandomEnemy(x,y,0,1));
 		}
+		if(Math.random()<0.02) {
+			GameWorld.enemies.add(new DropEnemy(x,y,0,1));
+		}
+		if(Math.random()<0.02) {
+			GameWorld.enemies.add(new CurveEnemy(x,y,0,1));
+		}
+		
+		
 	}
 	public void draw(MyFrame f) {
 		f.setColor(0,128,0);
