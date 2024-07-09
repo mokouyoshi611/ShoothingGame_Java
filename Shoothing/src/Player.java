@@ -40,7 +40,10 @@ public class Player extends Character implements KeyListener{
 						new PlayerBullet(x,y,-10,-10));
 				System.out.println("弾の数="+GameWorld.playerBullets.size());
 			}
-		
+		if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+			System.out.println("Enterキーが押されました");
+			GameWorld.enterPressed=true;
+		}
 	}
 
 	@Override
